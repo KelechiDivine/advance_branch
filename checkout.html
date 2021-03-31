@@ -1,0 +1,135 @@
+{% extends 'Drive_app_Html/main.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="box-element" id="form-wrapper">
+
+                <form id="form">
+                    <div id="user-info">
+
+                        <div class="form-field">
+
+                            <label>
+                                <input required class="form-control" type="text"
+                                name="name" placeholder="Name here..">
+                            </label>
+                        </div>
+
+                        <div class="form-field">
+
+                            <label>
+                                <input required class="form-control" type="email" name="email"
+                                       placeholder="Email here..">
+                            </label>
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="shipping-info">
+
+
+                        <hr>
+                        <p>Shipping Information: </p>
+
+                        <hr>
+                        <div class="form-field">
+                            <label>
+                                <input class="form-control" type="text" name="address"
+                                placeholder="Address here..">
+                            </label>
+                        </div>
+
+                        <div class="form-field">
+                            <label>
+                                <input class="form-control" type="text" name="Local government"
+                                placeholder="L.G.A..">
+                            </label>
+                        </div>
+
+                        <div class="form-field">
+                            <label>
+                                <input class="form-control" type="text" name="state"
+                                placeholder="state here..">
+                            </label>
+                        </div>
+
+                        <div class="form-field">
+                            <label>
+                                <input class="form-control" type="text" name="zip code"
+                                placeholder="zip code here..">
+                            </label>
+                        </div>
+
+                    </div>
+
+
+
+                    <hr>
+                    <input id="form-button" class="btn btn-success btn-block" type="Submit" value="continue">
+                </form>
+            </div>
+
+            <br>
+
+            <div class="box-element hidden" id="payment-info">
+                <small>Payment Option</small>
+            </div>
+        </div>
+    </div>
+
+{#    </div>#}
+
+
+{#        <div class="row">#}
+{#            <div class="col-lg-6">#}
+{#                <div class="box-element" id="form-wrapper">#}
+{#                </div>#}
+{#                <br>#}
+{##}
+{#                <div class="box-element hidden" id="payment-info">#}
+{#                    <small>Paypal option</small>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="col-lg-6">#}
+{#                <div class="box-element">#}
+{##}
+{#                </div>#}
+{#        </div>#}
+
+
+
+    <div class="col-lg-6">
+        <div class="box-element">
+            <a class="btn btn-outline-dark" href="{% url 'cart' %}">
+                &#x2190; Back to cart </a>
+
+            <hr>
+            <h3>Order Summary</h3>
+            <hr>
+
+            <div class="cart-row">
+                <div style="flex: 2"><img class="row-image" src="{% static 'image/ankara fabric.jpg' %}"></div>
+                <div style="flex: 2"><p>Product 1</p></div>
+                <div style="flex: 1"><p>$20.00</p></div>
+                <div style="flex: 1"><p>x2</p></div>
+
+
+
+
+            </div>
+                <h5>Items:      2</h5>
+                <h5>Total:      $4</h5>
+
+        </div>
+
+    </div>
+
+
+{% endblock content %}
+
+
